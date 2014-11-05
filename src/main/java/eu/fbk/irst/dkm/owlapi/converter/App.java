@@ -11,7 +11,7 @@ import org.coode.owlapi.turtle.TurtleOntologyFormat;
 import org.kohsuke.args4j.Argument;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.ExampleMode;
+import org.kohsuke.args4j.OptionHandlerFilter;
 import org.kohsuke.args4j.Option;
 import org.semanticweb.owlapi.io.OWLFunctionalSyntaxOntologyFormat;
 import org.semanticweb.owlapi.io.OWLXMLOntologyFormat;
@@ -106,7 +106,7 @@ public class App {
             System.err.println();
 
             // print option sample. This is useful some time
-            System.err.println("Example: java OWLConverter" + parser.printExample(ExampleMode.REQUIRED));
+            System.err.println("Example: java OWLConverter" + parser.printExample(OptionHandlerFilter.ALL));
 		} catch (IOException e) {
 			System.out.println("Could not export the ontology to output file."); 
 		} catch (UnparsableOntologyException e) {
