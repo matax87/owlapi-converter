@@ -36,10 +36,10 @@ public class App {
 	
 	private enum Syntax { RDFXML,OWLXML,TURTLE,MANCHESTER,FUNCTIONAL,TEXOWL }
 	@Option(name="-s",usage="Specifies the export syntax. If not specified RDFXML is used",metaVar="syntax")
-	private Syntax syntax;
+	private Syntax syntax = Syntax.RDFXML;
 	
 	@Option(name="-o",usage="Output to this file",metaVar="target")
-    private File output;
+  private File output;
 	
 	@Argument(index=0,usage="Input file",metaVar="source")
 	private File input;
