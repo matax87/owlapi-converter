@@ -100,13 +100,13 @@ public class App {
 			OWLOntologyConverter.convert(ontology, outputFormat, out);
 		} catch (CmdLineException e) {
 			System.err.println(e.getMessage());
-            System.err.println("java OWLConverter [-s syntax] [-o target] source");
+            System.err.println("java -jar owlapi-converter.jar [-s syntax] [-o target] source");
             // print the list of available options
             parser.printUsage(System.err);
             System.err.println();
 
             // print option sample. This is useful some time
-            System.err.println("Example: java OWLConverter" + parser.printExample(OptionHandlerFilter.ALL));
+            System.err.println("Example: java -jar owlapi-converter.jar" + parser.printExample(OptionHandlerFilter.ALL));
 		} catch (IOException e) {
 			System.out.println("Could not export the ontology to output file."); 
 		} catch (UnparsableOntologyException e) {
