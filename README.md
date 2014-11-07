@@ -25,10 +25,10 @@ where:
 
 * `source` (required argument) is the input ontology file. 
 * `-o target` (optional) specifies the output file.
-* `-s [RDFXML | OWLXML | TURTLE | MANCHESTER | FUNCTIONAL | TEXOWL]` (optional) specifies the export syntax. If it is not specified RDFXML is used.
+* `-s [rdfxml | owlxml | turtle | manchester | functional | texowl]` (optional) specifies the export syntax. If it is not specified rdfxml is used.
 
 For example:
 
 ```bash
-java -jar target/owlapi-converter.jar -s TEXOWL examples/pizza.owl -o OUTPUT
+java -jar target/owlapi-converter.jar -s texowl examples/pizza.owl -o OUTPUT
 ``` 
