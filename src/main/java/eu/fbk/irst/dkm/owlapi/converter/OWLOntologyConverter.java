@@ -20,8 +20,7 @@ public class OWLOntologyConverter {
 		
 		// copy prefixes from read format to the output one
 		if (inputFormat.isPrefixOWLOntologyFormat() && outputFormat.isPrefixOWLOntologyFormat()) {
-			PrefixOWLOntologyFormat prefixFormat = inputFormat.asPrefixOWLOntologyFormat();
-			outputFormat.asPrefixOWLOntologyFormat().copyPrefixesFrom(prefixFormat);
+			outputFormat.asPrefixOWLOntologyFormat().copyPrefixesFrom(inputFormat.asPrefixOWLOntologyFormat());
 		}
 		
 		// save ontology
